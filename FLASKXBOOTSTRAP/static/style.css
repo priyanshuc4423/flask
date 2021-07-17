@@ -1,0 +1,76 @@
+.nav-link {
+  color: white;
+}
+
+#main-page {
+  background-color: #30d5c8;
+  /* width: 100vw;
+  height: 100vh; */
+}
+
+.main-heading {
+  font-family: "Arvo", serif;
+  font-size: 4rem;
+  line-height: 1.5;
+  color: black;
+  margin-bottom: 15%;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  padding: 0 18px;
+}
+.navbar {
+  padding-bottom: 1rem;
+  margin-bottom: 3.5rem;
+}
+.nav-item {
+  padding: 0 18px;
+}
+
+.fancy-left {
+  display: inline-block;
+  margin-top: 5%;
+  /* margin-left: 60%; */
+  margin-left: 10%;
+  margin-bottom: 5%;
+}
+
+.fancy-right {
+  display: inline-block;
+  /* display: inline; */
+  margin-top: 5%;
+  margin-left: 40%;
+  margin-bottom: 5%;
+}
+
+.sub-heading {
+  /* display: block; */
+  color: black;
+  font: "Arvo", serif;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  /* margin-left: auto;
+  margin-right: auto; */
+}
+
+.cal-image {
+  display: block;
+  height: 18rem;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.carousel {
+  margin-bottom: 5rem;
+  margin-top: 5rem;
+}
+
+.carousel-item {
+  color: aliceblue;
+  background-color: black;
+  padding-bottom: 2rem;
+}
