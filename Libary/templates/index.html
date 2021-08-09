@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Library</title>
+</head>
+<body>
+<h1>My Library</h1>
+ {% if dict != [] %}
+  {% for dict in list %}
+    <ul>
+        <li>{{dict['TITLE']}}</li>
+        <li>{{dict['BOOKAUTHOR']}}</li>
+        <li>{{dict['RATING']}}</li>
+    </ul>
+ {% endfor %}
+{% else %}
+<h4>No data exist</h4>
+{% endif %}
+
+    
+<a href="{{url_for('add')}}">Add New Book</a>
+</body>
+</html>
