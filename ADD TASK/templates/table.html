@@ -1,0 +1,72 @@
+{% extends 'bootstrap/base.html' %}
+{% block title %}table{% endblock %}
+
+{% block styles %}
+{{super()}}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+<link rel="stylesheet" href="{{url_for('static',filename = 'styles.css')}}">
+{% endblock %}
+
+
+{% block content %}
+<table class="table table-dark table-hover">
+    <thead>
+    <tr>
+      <th scope="col" style="font-size:2rem">ID</th>
+      <th scope="col" style="font-size:2rem">NAME</th>
+      <th scope="col" style="font-size:2rem">Piority</th>
+      <th scope="col" style="font-size:2rem">Description</th>
+       <th scope="col" style="font-size:2rem">UPDATE</th>
+        <th scope="col" style="font-size:2rem">DELETE</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    {% for data in form %}
+
+    {% if data.piority == 'HIGH' %}
+  <tr CLASS="table-danger">
+      <th scope="row" style="font-size:1.5rem">{{data.id}}</th>
+      <td style="font-size:1.5rem">{{data.name}}</td>
+      <td style="font-size:1.5rem"><spa>{{data.piority}}</spa></td>
+      <td style="font-size:1.5rem">{{data.description}}</td>
+      <td style="font-size:1.5rem"><a href="{{url_for('update',id = data.id)}}"><button type="button" class="btn btn-outline-success">UPDATE</button></a></td>
+        <td style="font-size:1.5rem"><a href="{{url_for('delete',id = data.id)}}">🗑️</a></td>
+    </tr>
+  {% elif data.piority == 'MEDIUM' %}
+  <tr CLASS="table-warning">
+      <th scope="row" style="font-size:1.5rem">{{data.id}}</th>
+      <td style="font-size:1.5rem">{{data.name}}</td>
+      <td style="font-size:1.5rem"><spa>{{data.piority}}</spa></td>
+      <td style="font-size:1.5rem">{{data.description}}</td>
+      <td style="font-size:1.5rem"><a href="{{url_for('update',id = data.id)}}"><button type="button" class="btn btn-outline-success">UPDATE</button></a></td>
+      <td style="font-size:1.5rem"><a href="{{url_for('delete',id = data.id)}}">🗑️</a></td>
+    </tr>
+  {% else %}
+    <tr CLASS="table-dark">
+      <th scope="row" style="font-size:1.5rem">{{data.id}}</th>
+      <td style="font-size:1.5rem">{{data.name}}</td>
+      <td style="font-size:1.5rem"><spa>{{data.piority}}</spa></td>
+      <td style="font-size:1.5rem">{{data.description}}</td>
+        <td style="font-size:1.5rem"><a href="{{url_for('update',id = data.id)}}"><button type="button" class="btn btn-outline-success">UPDATE</button></a></td>
+        <td style="font-size:1.5rem"><a href="{{url_for('delete',id = data.id)}}">🗑️</a></td>
+    </tr>
+
+  {% endif %}
+    <div class="container">
+        <button class="close">❌</button>
+        <p id ='text' style="color:white">{{data.description}}</p></div>
+  {% endfor %}
+
+
+
+
+  </tbody>
+</table>
+<a href="{{url_for('index')}}">
+<button type="button"class="btn btn-outline-dark btn-lg" style="width:30%;text-align:center;">ADD MORE TASK</button>
+</a>
+
+
+<script src="{{url_for('static',filename = 'app.js')}}"></script>
+{% endblock %}
