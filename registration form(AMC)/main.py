@@ -5,8 +5,8 @@ from wtforms import StringField,SubmitField,SelectField
 from wtforms.validators import DataRequired,Email
 from flask_sqlalchemy import SQLAlchemy
 from smtplib import SMTP
-my_email = "jameswang8667@gmail.com"
-my_password = "Jambajuice@713"
+my_email = "somethimg@gmail.com"
+my_password = "password"
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'allyouwannadoiscocohangingoutwithyouisnogo'
 app.config['SQLALCHEMY_DATABASE_URI']='sqlite:///forms.db'
