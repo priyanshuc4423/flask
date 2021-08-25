@@ -8,8 +8,8 @@ from functools import wraps
 import csv
 
 from form import Info,Login,Register
-my_email = "jameswang8667@gmail.com"
-my_password = "Jambajuice@713"
+my_email = "name"
+my_password = "password"
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'allyouwannadoiscocohangingoutwithyouisnogo'
 app.config['SQLALCHEMY_DATABASE_URI']='sqlite:///forms.db'
