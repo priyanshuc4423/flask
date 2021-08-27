@@ -1,0 +1,27 @@
+{% extends 'bootstrap/base.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block styles %}
+{{ super() }}
+<script src="https://kit.fontawesome.com/bfb451d6b3.js" crossorigin="anonymous"></script>
+ <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+{% endblock %}
+
+
+{% block content %}
+
+<img class="background-img" src="https://wallpaperboat.com/wp-content/uploads/2019/10/cool-website-background-02.jpg">
+<div class="register">
+    <div class="content">
+    {% with messages = get_flashed_messages() %}
+  {% if messages %}
+    {% for message in messages %}
+      <p style="color:red;font-size:2rem;">{{ message }}</p>
+    {% endfor %}
+  {% endif %}
+    {% endwith %}
+{{ wtf.quick_form(form, novalidate=True, button_map={"submit": "primary"}) }}
+        </div>
+    </div>
+    {% endblock %}

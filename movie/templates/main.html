@@ -1,0 +1,26 @@
+{% extends 'bootstrap/base.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block styles %}
+{{ super() }}
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+ <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+{% endblock %}
+
+
+{% block content %}
+
+<img class="background-img" src="https://www.stockvault.net/data/2020/11/21/280975/preview16.jpg">
+<h1 class="main-heading">WAY BACK</h1>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col-lg-6 col-md-6 col-sm-12">
+<a class="main right btn btn-outline-info" href="{{url_for('register')}}">REGISTER</a>
+</div>
+        <div class="col-lg-6 col-md-6 col-sm-12">
+<a class="main left btn btn-outline-success" href="{{url_for('login')}}">LOGIN</a>
+</div>
+</div>
+
+    {% endblock %}

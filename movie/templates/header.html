@@ -1,0 +1,14 @@
+<nav class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+    <a href="{{url_for('get_data')}}" class="navbar-brand">EASYMONEY</a>
+    {% if current_user.is_authenticated: %}
+    <li class="nav-item">
+    <a class="item ms-3 nav-link" href="{{url_for('logout')}}">LOGOUT</a>
+      </li>
+    {% endif %}
+    <form class="d-flex" method="post" action="{{url_for('search')}}">
+      <input class="form-control me-2" name="search" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
