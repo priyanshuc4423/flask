@@ -1,0 +1,85 @@
+.data {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: black;
+  width: 80%;
+}
+
+.col {
+  margin: 5%;
+}
+
+.card-title {
+  font-size: 3rem;
+}
+
+.btn {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-text {
+  font-size: 1.5rem;
+}
+
+.navbar-brand {
+  font-size: 3rem;
+  margin-left: 2%;
+  margin-top: 2%;
+  font-weight: bold;
+}
+
+.register {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  margin-top: 10%;
+  margin-bottom: auto;
+  background-color: black;
+  padding: 2%;
+}
+
+.background-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+.content {
+  color: white;
+  font-size: 2rem;
+}
+
+.item {
+  font-size: 2rem;
+  color: black;
+}
+
+.main-heading {
+  font-size: 20rem;
+  margin-top: 10%;
+  font-weight: 400;
+  text-align: center;
+  color: black;
+}
+
+.main {
+  width: 50%;
+  height: 20%;
+  font-size: 2rem;
+  margin: 10%;
+}
+
+.right {
+  float: right;
+}
+.left {
+  float: left;
+}
