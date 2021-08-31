@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Secrets</title>
+</head>
+<body>
+<div class="jumbotron">
+	<div class="container">
+		<h1>Welcome</h1>
+		<p>Are you ready to discover my secret?</p>
+<!--		<a class="btn btn-primary btn-lg" href="{{ url_for('login') }}">Login</a>-->
+		<form method="post" action="{{url_for('home')}}" novalidate>
+			{{ new_form.csrf_token }}
+			<p>{{new_form.name.label}}<br>{{new_form.name(size = 20)}}</p>
+			 {% for err in new_form.name.errors %}
+				<span style="color:red">{{err}}</span>
+			{% endfor %}
+			<p>{{new_form.email.label}}<br>{{new_form.email(size = 20)}}</p>
+			{% for err in new_form.email.errors %}
+			<span style="color:red">{{err}}</span>
+			{% endfor %}
+			<p>{{new_form.password.label}}<br>{{new_form.password(size=20)}}</p>
+			{% for err in new_form.password.errors %}
+			<span style="color:red">{{err}}</span>
+			{% endfor %}
+			{{new_form.submit}}
+		</form>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,15 @@
+
+
+{% extends "bootstrap/base.html" %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+        <div class="container">
+		<h1>Login</h1>
+            <h1>CLICK THIS BUTTON TO GO TO LOGIN PAGE</h1>
+            <br>
+		<a href="{{url_for('home')}}"><button type="button" class="btn btn-outline-dark">LOGIN</button></a>
+        <!-- This is where our form will go. -->
+        </div>
+{% endblock %}
